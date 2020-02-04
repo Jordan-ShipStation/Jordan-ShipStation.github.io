@@ -56,7 +56,7 @@
         "url": "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i"
       }
     ],
-    "favicon": false,
+    "favicon": "@PROJECT_PATH@/assets/images/shipstation-stacked-white-shipstation-stacked-white-128x128.png",
     "noImageResize": false,
     "cssOptimize": false,
     "lazyLoad": false,
@@ -68,7 +68,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
-    "uniqCompNum": 31,
+    "uniqCompNum": 36,
     "versionPublish": "4.11.6",
     "screenshot": "screenshot.png"
   },
@@ -927,12 +927,19 @@
             },
             ".header-text, .sign": {
               "color": "#232323"
+            },
+            ".panel-text": {
+              "text-align": "left"
             }
           },
           "_name": "extAccordion8",
-          "_customHTML": "<section class=\"accordion1\" group=\"Accordion & Toggles & Tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <select title=\"Accordions Count\" name=\"bootstrapAccordion\">\n             <option value=\"1\">1</option>\n             <option value=\"2\">2</option>\n             <option value=\"3\">3</option>\n             <option value=\"4\" selected>4</option>\n             <option value=\"5\">5</option>\n             <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" title=\"Sign Color\" name=\"signColor\" value=\"#6cbe45\">\n        <input type=\"color\" title=\"Sign Hover Color\" name=\"signHoverColor\" value=\"#3f8200\">\n        <input type=\"color\" title=\"Accordions Color\" name=\"accordionsColor\" value=\"#ffffff\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"media-container-row align-center\">\n            <div class=\"col-12 col-md-12\">\n                <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .underline\">\n                    ShipStation Setup</h2>\n                <div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n                <h3 class=\"mbr-section-subtitle mbr-light mbr-fonts-style pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pt-3':!showUnderline}\">\n                    To begin your Account Setup - Go ahead and Login to your ShipStation Dashboard in a new browser window <a href=\"https://ship11.shipstation.com\" target=\"_blank\">Here</a>&nbsp; <br>Following the 4 steps below - each link will direct you right to the each setting to configure:</h3>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion col-sm-12 col-md-10 col-lg-8 align-left\" role=\"tablist\" aria-multiselectable=\"true\" mbr-class=\"{'pt-5':!showSubtitle}\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>1. Add a Ship From Location</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.&nbsp;</b>Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/warehouses\" target=\"_blank\"><b>Ship From Location Settings</b></a><br><b>2. </b>Next, Click the <b>Add a Ship From Location</b> button<br><b>4. </b>Enter your Shipping Address and save. <br><br><b>*NOTE* </b>Name &amp; Company Name field are required</p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>2. Add a Shipping Carrier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b></h4>\n                            </a>\n                            \n                        </div>\n                        <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1. </b>Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/providers\" target=\"_blank\"><b>Carrier &amp; Fulfillment Settings</b></a><br><b>2. </b>Click the <b>Add a Provider Account</b> Button<br><b>4. Select the Carrier</b>,<b> </b>click<b>&nbsp;</b>connect and follow the prompts to link your carrier account.<br><br></p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>\n                                     3. Connect/Setup a Selling Channel</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.</b> Click this link to navigate to <a href=\"https://ship11.shipstation.com/settings/stores\" target=\"_blank\"><b>Selling Channels Settings</b></a><br><b>2. </b>Click the <b>Connect a store or marketplace</b> button<br><b>4. </b>Type the name of your selling channel/marketplace in the search field or scroll to locate and select the tile<br><b>5. Click connect</b> and follow the on-screen prompts to link your selling channel<br><br><b>*NOTE* </b><br>- If you don't see your selling channel - let me know as some selling channels have built their own 3rd party integrations to connect with us.&nbsp;<br>- If you will be uploading a CSV file (spreadsheet) of orders or would like to manually input your orders as you ship, select the \"<b>ShipStation</b>\" store tile to setup a ShipStation manual orders store.</p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>4. Configure Label &amp; Printer Settings &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.</b> Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/printing\" target=\"_blank\"><b>Printing Setup Settings</b></a><br><b>2.</b>&nbsp;Click <b>Document Options</b> next to <b>Labels</b> to configure your Label preferences<br><b>4.</b> Once you've configured your label settings, Click <b>ShipStation Connect </b>from the left-side menu or click this link <a href=\"https://ship11.shipstation.com/settings/connect\" target=\"_blank\"><b>Here</b></a><br><b>5.</b> Click the&nbsp;<b>Install ShipStation Connect </b>button<br><b>6.</b> Once Installed, Register the computer by entering in your ShipStation Username/Email &amp; Password login credentials<br><b>7.</b> ShipStation connect will display \"<b>Connected</b>\" you can minimize that as it will run in the background and navigate back to your ShipStation Connect page to enable or disable the printers you will be using by selecting the \"<b>shared</b>\" and \"<b>disable</b>\" check-boxes next to each.</p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\">\n                                    Returns &amp; Refunds\n                                </h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolorem, non. Sunt aliquam a odio, sapiente corporis necessitatibus quia assumenda expedita tempora error non deserunt beatae ex, eaque voluptatem quas.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\">\n                                     Returns &amp; Refunds\n                                </h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptates dolorem, odit enim! Aspernatur quos ipsa, sit! Repudiandae, laboriosam enim aliquam, similique suscipit quas dicta voluptate repellendus distinctio laborum at!\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"accordion1\" group=\"Accordion & Toggles & Tabs\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-switch-arrow\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Underline\" name=\"showUnderline\" condition=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <select title=\"Accordions Count\" name=\"bootstrapAccordion\">\n             <option value=\"1\">1</option>\n             <option value=\"2\">2</option>\n             <option value=\"3\">3</option>\n             <option value=\"4\" selected>4</option>\n             <option value=\"5\">5</option>\n             <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" title=\"Sign Color\" name=\"signColor\" value=\"#6cbe45\">\n        <input type=\"color\" title=\"Sign Hover Color\" name=\"signHoverColor\" value=\"#3f8200\">\n        <input type=\"color\" title=\"Accordions Color\" name=\"accordionsColor\" value=\"#ffffff\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"media-container-row align-center\">\n            <div class=\"col-12 col-md-12\">\n                <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .underline\">\n                    ShipStation Setup</h2>\n                <div class=\"underline align-center pb-3\" mbr-if=\"showUnderline && showTitle\">\n                    <div class=\"line\"></div>\n                </div>\n                <h3 class=\"mbr-section-subtitle mbr-light mbr-fonts-style pb-5\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-class=\"{'pt-3':!showUnderline}\">\n                    To begin your Account Setup - Go ahead and Login to your ShipStation Dashboard in a new browser window <a href=\"https://ship11.shipstation.com\" target=\"_blank\">Here</a>&nbsp; <br>Following the 4 steps below - each link will direct you right to the each setting to configure:</h3>\n                <div id=\"bootstrap-accordion\" class=\"panel-group accordionStyles accordion col-sm-12 col-md-10 col-lg-8 align-left\" role=\"tablist\" aria-multiselectable=\"true\" mbr-class=\"{'pt-5':!showSubtitle}\">\n                    <div class=\"card\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingOne\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>1. Add a Ship From Location</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse1\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingOne\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.&nbsp;</b>Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/warehouses\" target=\"_blank\"><b>Ship From Location Settings</b></a><br><b>2. </b>Next, Click the <b>Add a Ship From Location</b> button<br><b>4. </b>Enter your Shipping Address and save. <br><br><b>Click to View <a href=\"popup:#mbr-popup-w\" data-toggle=\"modal\" data-target=\"#mbr-popup-w\"><b>Video Guide</b></a></b><br><br><b>*NOTE* </b>Name &amp; Company Name field are required<br><br><br></p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 1\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingTwo\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse2\" aria-expanded=\"false\" aria-controls=\"collapse2\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>2. Add a Shipping Carrier &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b></h4>\n                            </a>\n                            \n                        </div>\n                        <div id=\"collapse2\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingTwo\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1. </b>Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/providers\" target=\"_blank\"><b>Carrier &amp; Fulfillment Settings</b></a><br><b>2. </b>Click the <b>Add a Provider Account</b> Button<br><b>4. Select the Carrier</b>,<b> </b>click<b>&nbsp;</b>connect and follow the prompts to link your carrier account.<br><br><b>Click to view the <a href=\"popup:#mbr-popup-x\" data-toggle=\"modal\" data-target=\"#mbr-popup-x\"><b>Video Guide</b></a><br></b><br></p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 2\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingThree\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse3\" aria-expanded=\"false\" aria-controls=\"collapse3\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>\n                                     3. Connect/Setup a Selling Channel</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse3\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingThree\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.</b> Click this link to navigate to <a href=\"https://ship11.shipstation.com/settings/stores\" target=\"_blank\"><b>Selling Channels Settings</b></a><br><b>2. </b>Click the <b>Connect a store or marketplace</b> button<br><b>4. </b>Type the name of your selling channel/marketplace in the search field or scroll to locate and select the tile<br><b>5. Click connect</b> and follow the on-screen prompts to link your selling channel<br><br><b>Click to View</b> <a href=\"popup:#mbr-popup-x\" data-toggle=\"modal\" data-target=\"#mbr-popup-x\"><b>Video Guide</b></a><br><br><b>*NOTE* </b><br>- If you don't see your selling channel - let me know as some selling channels have built their own 3rd party integrations to connect with us.&nbsp;<br>- If you will be uploading a CSV file (spreadsheet) of orders or would like to manually input your orders as you ship, select the \"<b>ShipStation</b>\" store tile to setup a ShipStation manual orders store.</p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 3\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFour\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse4\" aria-expanded=\"false\" aria-controls=\"collapse4\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\"><b>4. Configure Label &amp; Printer Settings &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b></h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse4\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFour\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\"><b>1.</b> Click this link here to navigate to your <a href=\"https://ship11.shipstation.com/settings/printing\" target=\"_blank\"><b>Printing Setup Settings</b></a><br><b>2.</b>&nbsp;Click <b>Document Options</b> next to <b>Labels</b> to configure your Label preferences<br><b>4.</b> Once you've configured your label settings, Click <b>ShipStation Connect </b>from the left-side menu or click this link <a href=\"https://ship11.shipstation.com/settings/connect\" target=\"_blank\"><b>Here</b></a><br><b>5.</b> Click the&nbsp;<b>Install ShipStation Connect </b>button<br><b>6.</b> Once Installed, Register the computer by entering in your ShipStation Username/Email &amp; Password login credentials<br><b>7.</b> ShipStation connect will display \"<b>Connected</b>\" you can minimize that as it will run in the background and navigate back to your ShipStation Connect page to enable or disable the printers you will be using by selecting the \"<b>shared</b>\" and \"<b>disable</b>\" check-boxes next to each.<br><br><b>Click to View</b> <a href=\"popup:#mbr-popup-z\" data-toggle=\"modal\" data-target=\"#mbr-popup-z\"><b>Video Guide</b></a><br></p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 4\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingFive\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse5\" aria-expanded=\"false\" aria-controls=\"collapse5\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\">\n                                    Returns &amp; Refunds\n                                </h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse5\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingFive\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dolorem, non. Sunt aliquam a odio, sapiente corporis necessitatibus quia assumenda expedita tempora error non deserunt beatae ex, eaque voluptatem quas.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n            \n                    <div class=\"card\" mbr-if=\"bootstrapAccordion > 5\">\n                        <div class=\"card-header\" role=\"tab\" id=\"headingSix\">\n                            <a role=\"button\" class=\"collapsed panel-title\" data-toggle=\"collapse\" data-core href=\"#collapse6\" aria-expanded=\"false\" aria-controls=\"collapse6\">\n                                <span class=\"sign mbr-iconfont mbri-arrow-down inactive\"></span>\n                                <h4 class=\"mbr-fonts-style header-text\" mbr-theme-style=\"display-5\" data-app-selector=\".header-text, .sign\">\n                                     Returns &amp; Refunds\n                                </h4>\n                            </a>\n                        </div>\n                        <div id=\"collapse6\" class=\"panel-collapse noScroll collapse\" role=\"tabpanel\" aria-labelledby=\"headingSix\" data-parent=\"#accordion\">\n                            <div class=\"panel-body p-4\">\n                                <p class=\"mbr-fonts-style panel-text\" mbr-theme-style=\"display-7\" data-app-selector=\".panel-text\">\n                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptates dolorem, odit enim! Aspernatur quos ipsa, sit! Repudiandae, laboriosam enim aliquam, similique suscipit quas dicta voluptate repellendus distinctio laborum at!\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n<div class=\"wistia_responsive_padding\" style=\"padding:56.25% 0 0 0;position:relative;\"><div class=\"wistia_responsive_wrapper\" style=\"height:100%;left:0;position:absolute;top:0;width:100%;\"><iframe src=\"https://fast.wistia.net/embed/iframe/h8tt0jlee9?seo=false&videoFoam=true\" title=\"ShipStation Canada Team Video\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"no\" class=\"wistia_embed\" name=\"wistia_embed\" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width=\"100%\" height=\"100%\"></iframe></div></div>\n[JS_CODE_0]\n    </div>\n</section>",
           "_cid": "rKSuIkYYPP",
           "_anchor": "extAccordion8-t",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script src=\"https://fast.wistia.net/assets/external/E-v1.js\" async></script>"
+          ],
           "_protectedParams": [],
           "_global": false,
           "_once": false,
@@ -993,6 +1000,1204 @@
           "_customHTML": "<section class=\"mbr-section contacts3\" group=\"Forms\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <!---->\n    <mbr-parameters>\n        <!---->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" value=\"6\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitleSect\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitleSect\">\n        <!---->\n        <input type=\"map\" title=\"Map\" name=\"googleMap\">\n        <!---->\n        <input type=\"checkbox\" title=\"Show Col-1\" name=\"showCol1\" checked>\n        <input type=\"checkbox\" title=\"Show Col-2\" name=\"showCol2\" checked>\n        <input type=\"checkbox\" title=\"Show Col-3\" name=\"showCol3\" checked>\n        <input type=\"checkbox\" title=\"Show Col-4\" name=\"showCol4\" checked>\n        <!---->\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"checkIcons\" checked>\n        <input type=\"range\" inline title=\"Size Icons\" name=\"iconsSize\" min=\"1.5\" max=\"2.5\" step=\"0.1\" value=\"2.2\" condition=\"checkIcons\">\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#001624\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row\">\n            <!--Titles-->\n            <div class=\"title col-12\">\n                <h2 mbr-if=\"showTitleSect\" class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-1\"><b>\n                    How to get in touch</b></h2>\n                <h3 mbr-if=\"showSubtitleSect\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle pt-2 mbr-light mbr-fonts-style\" mbr-theme-style=\"display-5\">\n                    Subtitle\n                </h3>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"row\">\n                    <div class=\"col-12 col-md-6\" mbr-if=\"showCol1\">\n                        <div class=\"wrapper\">\n                            <span class=\"iconfont-wrapper\" mbr-if=\"checkIcons\">\n                                <span mbr-icon class=\"amp-iconfont icon mbri-letter\" style=\"color: rgb(255, 128, 0); fill: rgb(255, 128, 0);\"></span>\n                            </span>\n                            <div class=\"b-info b-adress\">\n                                <h5 class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-5\"><b>\n                                    E-mail:\n                                </b></h5>\n                                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                    Email me directly at <a href=\"mailto:jordan.carter@shipstation.ca\">jordan.carter@shipstation.ca</a></p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-6\" mbr-if=\"showCol2\">\n                        <div class=\"wrapper\">\n                            <span class=\"iconfont-wrapper\" mbr-if=\"checkIcons\">\n                                <span mbr-icon class=\"amp-iconfont icon fa-phone fa\" style=\"color: rgb(108, 190, 69); fill: rgb(108, 190, 69);\"></span>\n                            </span>\n                            <div class=\"b-info b-phone\">\n                                <h5 class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-5\"><b>\n                                    Phone</b>:\n                                </h5>\n                                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">You can reach me directly at <a href=\"tel:+1-647-374-0981\">+1-647-374-0981</a></p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-6\" mbr-if=\"showCol3\">\n                        <div class=\"wrapper\">\n                            <span class=\"iconfont-wrapper\" mbr-if=\"checkIcons\">\n                                <span mbr-icon class=\"amp-iconfont icon fa-comment-o fa\" style=\"color: rgb(255, 128, 0); fill: rgb(255, 128, 0);\"></span>\n                            </span>\n                            <div class=\"b-info b-mail\">\n                                <h5 class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-5\"><b>Quick Message:\n                                </b></h5>\n                                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                    Click to send a <b><a href=\"sms:+1-647-374-0981\">SMS/Text Message</a></b></p>\n                            </div>\n                        </div>\n                    </div>\n                    <div class=\"col-12 col-md-6\" mbr-if=\"showCol4\">\n                        <div class=\"wrapper\">\n                            <span class=\"iconfont-wrapper\" mbr-if=\"checkIcons\">\n                                <span mbr-icon class=\"amp-iconfont icon mbri-question\" style=\"color: rgb(108, 190, 69); fill: rgb(108, 190, 69);\"></span>\n                            </span>\n                            <div class=\"b-info b-mail\">\n                                <h5 class=\"align-left mbr-fonts-style\" mbr-theme-style=\"display-5\"><b>Support:\n                                </b></h5>\n                                <p class=\"mbr-text align-left mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                    For immediate help when I'm not available or troubleshooting technical issues we have <a href=\"https://help.shipstation.ca/hc/en-ca/articles/360025445471-Contact-ShipStation-Support\" target=\"_blank\">24x7 Chat support</a> and <a href=\"tel:+1-647-493-7555\">Phone Support</a> Mon-Fri 9am-5pm (CST). &nbsp;Or <a href=\"mailto:support@shipstation.com\">Submit a Support ticket</a> to <a href=\"mailto:support@shipstation.com\">support@shipstation.com</a><br></p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "rKoY5gboVu",
           "_anchor": "contacts3-9",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "popup-builder",
+          "_isSecondary": true,
+          "typeCompatible": "!isAMP",
+          "_styles": {
+            "&.popup-builder": {
+              "background-color": "#ffffff",
+              ".modal": {
+                "position": "relative",
+                "display": "block",
+                "z-index": "1"
+              },
+              ".modal-dialog": {
+                "margin-top": "60px",
+                "margin-bottom": "60px"
+              }
+            },
+            ".modal-content, .modal-dialog": {
+              "height": "auto"
+            },
+            ".form-wrapper": {
+              ".input-group-btn": {
+                "margin-right": "auto",
+                "margin-left": "auto",
+                ".btn": {
+                  "margin": "0 !important"
+                }
+              },
+              "@media (min-width: 769px)": {
+                ".mbr-form": {
+                  ".form-group, .input-group-btn": {
+                    "padding": "0 .5rem"
+                  }
+                }
+              }
+            },
+            ".card-img": {
+              "width": "100%",
+              "margin": "auto",
+              "border-radius": "0"
+            },
+            ".mbr-figure": {
+              "img": {
+                "display": "block",
+                "width": "100%",
+                "-ms-flex-item-align": "center",
+                "-ms-grid-row-align": "center",
+                "-webkit-align-self": "center",
+                "align-self": "center"
+              }
+            },
+            ".mbr-text": {
+              "text-align": "center"
+            },
+            ".pt-0": {
+              "padding-top": "0 !important"
+            },
+            ".pb-0": {
+              "padding-bottom": "0 !important"
+            },
+            ".form-content": {
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "text-align": "center"
+            },
+            ".mbr-overlay": {
+              "bottom": "0",
+              "left": "0",
+              "position": "absolute",
+              "right": "0",
+              "top": "0",
+              "z-index": "0",
+              "pointer-events": "none"
+            },
+            ".modal-open": {
+              "overflow": "hidden"
+            },
+            ".modal-open .modal": {
+              "overflow-x": "hidden",
+              "overflow-y": "auto"
+            },
+            ".modal": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1050",
+              "display": "none",
+              "width": "100%",
+              "height": "100%",
+              "overflow": "hidden",
+              "outline": "0"
+            },
+            ".modal-dialog": {
+              "position": "relative",
+              "width": "auto",
+              "margin": ".5rem",
+              "pointer-events": "none"
+            },
+            ".modal.fade .modal-dialog": {
+              "transition": "transform 0.3s ease-out, -webkit-transform 0.3s ease-out",
+              "-webkit-transform": "translate(0, -50px)",
+              "transform": "translate(0, -50px)"
+            },
+            ".modal.show .modal-dialog": {
+              "-webkit-transform": "none",
+              "transform": "none"
+            },
+            ".modal-dialog-centered": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "min-height": "~\"calc(100% - (.5rem * 2))\""
+            },
+            ".modal-dialog-centered::before": {
+              "display": "block",
+              "height": "~\"calc(100vh - (.5rem * 2))\"",
+              "content": "\"\""
+            },
+            ".modal-content": {
+              "background": "@cardBg",
+              "position": "relative",
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "width": "100%",
+              "pointer-events": "auto",
+              "background-clip": "padding-box",
+              "border": "none",
+              "outline": "0",
+              "-webkit-box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)",
+              "box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)"
+            },
+            ".modal-backdrop": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1040",
+              "width": "100vw",
+              "height": "100vh",
+              "background-color": "#000"
+            },
+            ".modal-backdrop.fade": {
+              "opacity": "0"
+            },
+            ".modal-backdrop.show": {
+              "opacity": ".5"
+            },
+            ".modal-header": {
+              "display": "flex",
+              "-ms-flex-align": "start",
+              "align-items": "flex-start",
+              "-ms-flex-pack": "justify",
+              "justify-content": "space-between",
+              "padding": "1rem",
+              "border-bottom": "none"
+            },
+            ".modal-header .close": {
+              "position": "absolute",
+              "top": "auto",
+              "right": "1rem",
+              "margin": "-1rem -1rem -1rem auto",
+              "padding": "1rem",
+              "opacity": ".75",
+              "&:hover": {
+                "opacity": "1"
+              },
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".modal-title": {
+              "line-height": "1.5",
+              "width": "100%",
+              "margin": "0",
+              "text-align": "center"
+            },
+            ".modal-body": {
+              "position": "relative",
+              "-ms-flex": "1 1 auto",
+              "flex": "1 1 auto",
+              "padding": "1rem",
+              "min-height": "100%"
+            },
+            ".modal-footer": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "padding": "1rem",
+              "border-top": "none",
+              "text-align": "center"
+            },
+            ".modal-scrollbar-measure": {
+              "position": "absolute",
+              "top": "-9999px",
+              "width": "50px",
+              "height": "50px",
+              "overflow": "scroll"
+            },
+            "@media (min-width: 576px)": {
+              ".modal-dialog": {
+                "max-width": "500px",
+                "margin": "1.75rem auto"
+              },
+              ".modal-dialog-centered": {
+                "min-height": "~\"calc(100% - (1.75rem * 2))\""
+              },
+              ".modal-dialog-centered::before": {
+                "height": "~\"calc(100vh - (1.75rem * 2))\""
+              },
+              ".modal-sm": {
+                "max-width": "300px"
+              },
+              ".container": {
+                "max-width": "540px"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".modal-lg, .modal-xl": {
+                "max-width": "800px"
+              },
+              ".container": {
+                "max-width": "960px"
+              }
+            },
+            "@media (min-width: 1200px)": {
+              ".modal-xl": {
+                "max-width": "1140px"
+              },
+              ".container": {
+                "max-width": "1140px"
+              }
+            },
+            ".container": {
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            "@media (min-width: 768px)": {
+              ".container": {
+                "max-width": "720px"
+              }
+            },
+            ".row": {
+              "display": "flex",
+              "-ms-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "margin-right": "-15px",
+              "margin-left": "-15px"
+            },
+            ".col-md-4": {
+              "position": "relative",
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 33.333333%",
+              "flex": "0 0 33.333333%",
+              "max-width": "33.333333%"
+            },
+            ".form-group": {
+              "margin-bottom": "1rem"
+            },
+            ".form-control": {
+              "display": "block",
+              "width": "100%",
+              "font-size": "1rem",
+              "font-weight": "400",
+              "line-height": "1.5"
+            },
+            ".col": {
+              "-ms-flex-preferred-size": "0",
+              "flex-basis": "0",
+              "-ms-flex-positive": "1",
+              "flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".col-md-auto": {
+              "position": "relative",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 auto",
+              "flex": "0 0 auto",
+              "width": "auto",
+              "max-width": "100%"
+            }
+          },
+          "_name": "mbr-popup",
+          "_customHTML": "<section class=\"popup-builder\" group=\"Popup\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Triggers / Show Popup</header>\n        <label>On Click</label>\n        <label>Use [popup-id] with any link or button (Link -&gt; Popup tab)</label>\n\n        <input type=\"checkbox\" title=\"On Timer\" name=\"onTimer\">\n        <input type=\"range\" title=\"Delay (s)\" name=\"onTimerDelay\" min=\"0\" max=\"30\" step=\"1\" value=\"5\" condition=\"onTimer == true\">\n\n        <input type=\"checkbox\" title=\"On Page Exit\" name=\"onPageExit\">\n\n        <input type=\"checkbox\" title=\"On Scroll to End\" name=\"onScroll\">\n\n        <select title=\"Add to Pages:\" name=\"popupOnPages\" multiple condition=\"onTimer == true || onPageExit == true || onScroll == true\"></select>\n\n        <header>Content</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <select title=\"Content Type\" name=\"popupContentType\">\n            <option value=\"1\">None</option>\n            <option value=\"2\">Image</option>\n            <option value=\"3\" selected>Video</option>\n            <option value=\"4\">Form</option>\n        </select>\n\n        <select title=\"Size\" name=\"popupSize\">\n            <option value=\"1\">Small</option>\n            <option value=\"2\">Default</option>\n            <option value=\"3\" selected>Large</option>\n            <option value=\"4\">Extra large</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <input type=\"color\" title=\"Background Color\" name=\"cardBg\" value=\"#ffffff\">\n\n        <header>Overlay</header>\n        <input type=\"color\" title=\"Color\" name=\"popupOverlayColor\" value=\"#000000\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': popupOverlayColor, 'top': 0, 'right': 0, 'bottom': 0, 'left': 0, 'position': absolute, 'z-index': 0, 'pointer-events': none}\">\n    </div>\n\n    <div class=\"modal mbr-popup\" tabindex=\"-1\" role=\"dialog\" data-overlay-color=\"{{popupOverlayColor}}\" data-overlay-opacity=\"{{overlayOpacity}}\" data-on-timer-delay=\"{{onTimer ? onTimerDelay : ''}}\" data-on-exit=\"{{onPageExit}}\" data-on-scroll=\"{{onScroll}}\">\n        <div class=\"modal-dialog\" role=\"document\" mbr-class=\"{\n            'modal-sm': popupSize == 1,\n            '': popupSize == 2,\n            'modal-lg': popupSize == 3,\n            'modal-xl': popupSize == 4\n            }\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\" mbr-class=\"{'pb-0': showTitle && showText}\">\n                    <h5 class=\"modal-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".modal-title\" mbr-if=\"showTitle\">Add a Ship From Location</h5>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"currentColor\">\n                            <path d=\"M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z\"></path>\n                        </svg>\n                    </button>\n                </div>\n\n                <div class=\"modal-body\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\"></p>\n\n                    <div mbr-if=\"popupContentType !== 1\">\n                        <div class=\"card-img mbr-figure\" mbr-if=\"popupContentType == 2\">\n                            <img src=\"../_images/popup.jpg\" alt=\"Mobirise\">\n                        </div>\n                            <div mbr-video class=\"video-block mbr-figure\" mbr-if=\"popupContentType == 3\">\n                                <iframe src=\"https://youtu.be/JSJOcTPZzaM?loop=0&autoplay=0\"></iframe>\n                            </div>\n\n                            <div mbr-form mbr-if=\"popupContentType == 4\" class=\"form-wrapper\">\n                                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                                    <div class=\"container\">\n                                        <div class=\"row\">\n                                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                                        </div>\n                                        <div class=\"row form-content\">\n                                            <div class=\"col-md-4 form-group\" data-for=\"name\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"col-md-4 form-group\" data-for=\"lastName\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" data-form-field=\"Last Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"form-group col\" data-for=\"email\">\n                                                <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                                            </div>\n                                            <div class=\"col-md-auto input-group-btn\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                                                <a type=\"submit\" class=\"btn btn-primary\">SUBSCRIBE</a>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"modal-footer\" mbr-class=\"{'pt-0': popupContentType == 1 || popupContentType == 4}\" mbr-if=\"showButtons\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://help.shipstation.ca/hc/en-ca/articles/360033977312-V3-Set-Ship-From-Return-Address\" data-app-placeholder=\"Type Text\" target=\"_blank\">Learn More</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n</section>",
+          "_cid": "rPzaolHhij",
+          "_anchor": "mbr-popup-w",
+          "_popupId": "mbr-popup-w",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "popup-builder",
+          "_isSecondary": true,
+          "typeCompatible": "!isAMP",
+          "_styles": {
+            "&.popup-builder": {
+              "background-color": "#ffffff",
+              ".modal": {
+                "position": "relative",
+                "display": "block",
+                "z-index": "1"
+              },
+              ".modal-dialog": {
+                "margin-top": "60px",
+                "margin-bottom": "60px"
+              }
+            },
+            ".modal-content, .modal-dialog": {
+              "height": "auto"
+            },
+            ".form-wrapper": {
+              ".input-group-btn": {
+                "margin-right": "auto",
+                "margin-left": "auto",
+                ".btn": {
+                  "margin": "0 !important"
+                }
+              },
+              "@media (min-width: 769px)": {
+                ".mbr-form": {
+                  ".form-group, .input-group-btn": {
+                    "padding": "0 .5rem"
+                  }
+                }
+              }
+            },
+            ".card-img": {
+              "width": "100%",
+              "margin": "auto",
+              "border-radius": "0"
+            },
+            ".mbr-figure": {
+              "img": {
+                "display": "block",
+                "width": "100%",
+                "-ms-flex-item-align": "center",
+                "-ms-grid-row-align": "center",
+                "-webkit-align-self": "center",
+                "align-self": "center"
+              }
+            },
+            ".mbr-text": {
+              "text-align": "center"
+            },
+            ".pt-0": {
+              "padding-top": "0 !important"
+            },
+            ".pb-0": {
+              "padding-bottom": "0 !important"
+            },
+            ".form-content": {
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "text-align": "center"
+            },
+            ".mbr-overlay": {
+              "bottom": "0",
+              "left": "0",
+              "position": "absolute",
+              "right": "0",
+              "top": "0",
+              "z-index": "0",
+              "pointer-events": "none"
+            },
+            ".modal-open": {
+              "overflow": "hidden"
+            },
+            ".modal-open .modal": {
+              "overflow-x": "hidden",
+              "overflow-y": "auto"
+            },
+            ".modal": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1050",
+              "display": "none",
+              "width": "100%",
+              "height": "100%",
+              "overflow": "hidden",
+              "outline": "0"
+            },
+            ".modal-dialog": {
+              "position": "relative",
+              "width": "auto",
+              "margin": ".5rem",
+              "pointer-events": "none"
+            },
+            ".modal.fade .modal-dialog": {
+              "transition": "transform 0.3s ease-out, -webkit-transform 0.3s ease-out",
+              "-webkit-transform": "translate(0, -50px)",
+              "transform": "translate(0, -50px)"
+            },
+            ".modal.show .modal-dialog": {
+              "-webkit-transform": "none",
+              "transform": "none"
+            },
+            ".modal-dialog-centered": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "min-height": "~\"calc(100% - (.5rem * 2))\""
+            },
+            ".modal-dialog-centered::before": {
+              "display": "block",
+              "height": "~\"calc(100vh - (.5rem * 2))\"",
+              "content": "\"\""
+            },
+            ".modal-content": {
+              "background": "@cardBg",
+              "position": "relative",
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "width": "100%",
+              "pointer-events": "auto",
+              "background-clip": "padding-box",
+              "border": "none",
+              "outline": "0",
+              "-webkit-box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)",
+              "box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)"
+            },
+            ".modal-backdrop": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1040",
+              "width": "100vw",
+              "height": "100vh",
+              "background-color": "#000"
+            },
+            ".modal-backdrop.fade": {
+              "opacity": "0"
+            },
+            ".modal-backdrop.show": {
+              "opacity": ".5"
+            },
+            ".modal-header": {
+              "display": "flex",
+              "-ms-flex-align": "start",
+              "align-items": "flex-start",
+              "-ms-flex-pack": "justify",
+              "justify-content": "space-between",
+              "padding": "1rem",
+              "border-bottom": "none"
+            },
+            ".modal-header .close": {
+              "position": "absolute",
+              "top": "auto",
+              "right": "1rem",
+              "margin": "-1rem -1rem -1rem auto",
+              "padding": "1rem",
+              "opacity": ".75",
+              "&:hover": {
+                "opacity": "1"
+              },
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".modal-title": {
+              "line-height": "1.5",
+              "width": "100%",
+              "margin": "0",
+              "text-align": "center"
+            },
+            ".modal-body": {
+              "position": "relative",
+              "-ms-flex": "1 1 auto",
+              "flex": "1 1 auto",
+              "padding": "1rem",
+              "min-height": "100%"
+            },
+            ".modal-footer": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "padding": "1rem",
+              "border-top": "none",
+              "text-align": "center"
+            },
+            ".modal-scrollbar-measure": {
+              "position": "absolute",
+              "top": "-9999px",
+              "width": "50px",
+              "height": "50px",
+              "overflow": "scroll"
+            },
+            "@media (min-width: 576px)": {
+              ".modal-dialog": {
+                "max-width": "500px",
+                "margin": "1.75rem auto"
+              },
+              ".modal-dialog-centered": {
+                "min-height": "~\"calc(100% - (1.75rem * 2))\""
+              },
+              ".modal-dialog-centered::before": {
+                "height": "~\"calc(100vh - (1.75rem * 2))\""
+              },
+              ".modal-sm": {
+                "max-width": "300px"
+              },
+              ".container": {
+                "max-width": "540px"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".modal-lg, .modal-xl": {
+                "max-width": "800px"
+              },
+              ".container": {
+                "max-width": "960px"
+              }
+            },
+            "@media (min-width: 1200px)": {
+              ".modal-xl": {
+                "max-width": "1140px"
+              },
+              ".container": {
+                "max-width": "1140px"
+              }
+            },
+            ".container": {
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            "@media (min-width: 768px)": {
+              ".container": {
+                "max-width": "720px"
+              }
+            },
+            ".row": {
+              "display": "flex",
+              "-ms-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "margin-right": "-15px",
+              "margin-left": "-15px"
+            },
+            ".col-md-4": {
+              "position": "relative",
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 33.333333%",
+              "flex": "0 0 33.333333%",
+              "max-width": "33.333333%"
+            },
+            ".form-group": {
+              "margin-bottom": "1rem"
+            },
+            ".form-control": {
+              "display": "block",
+              "width": "100%",
+              "font-size": "1rem",
+              "font-weight": "400",
+              "line-height": "1.5"
+            },
+            ".col": {
+              "-ms-flex-preferred-size": "0",
+              "flex-basis": "0",
+              "-ms-flex-positive": "1",
+              "flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".col-md-auto": {
+              "position": "relative",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 auto",
+              "flex": "0 0 auto",
+              "width": "auto",
+              "max-width": "100%"
+            }
+          },
+          "_name": "mbr-popup",
+          "_customHTML": "<section class=\"popup-builder\" group=\"Popup\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Triggers / Show Popup</header>\n        <label>On Click</label>\n        <label>Use [popup-id] with any link or button (Link -&gt; Popup tab)</label>\n\n        <input type=\"checkbox\" title=\"On Timer\" name=\"onTimer\">\n        <input type=\"range\" title=\"Delay (s)\" name=\"onTimerDelay\" min=\"0\" max=\"30\" step=\"1\" value=\"5\" condition=\"onTimer == true\">\n\n        <input type=\"checkbox\" title=\"On Page Exit\" name=\"onPageExit\">\n\n        <input type=\"checkbox\" title=\"On Scroll to End\" name=\"onScroll\">\n\n        <select title=\"Add to Pages:\" name=\"popupOnPages\" multiple condition=\"onTimer == true || onPageExit == true || onScroll == true\"></select>\n\n        <header>Content</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <select title=\"Content Type\" name=\"popupContentType\">\n            <option value=\"1\">None</option>\n            <option value=\"2\">Image</option>\n            <option value=\"3\" selected>Video</option>\n            <option value=\"4\">Form</option>\n        </select>\n\n        <select title=\"Size\" name=\"popupSize\">\n            <option value=\"1\">Small</option>\n            <option value=\"2\">Default</option>\n            <option value=\"3\" selected>Large</option>\n            <option value=\"4\">Extra large</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <input type=\"color\" title=\"Background Color\" name=\"cardBg\" value=\"#ffffff\">\n\n        <header>Overlay</header>\n        <input type=\"color\" title=\"Color\" name=\"popupOverlayColor\" value=\"#000000\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': popupOverlayColor, 'top': 0, 'right': 0, 'bottom': 0, 'left': 0, 'position': absolute, 'z-index': 0, 'pointer-events': none}\">\n    </div>\n\n    <div class=\"modal mbr-popup\" tabindex=\"-1\" role=\"dialog\" data-overlay-color=\"{{popupOverlayColor}}\" data-overlay-opacity=\"{{overlayOpacity}}\" data-on-timer-delay=\"{{onTimer ? onTimerDelay : ''}}\" data-on-exit=\"{{onPageExit}}\" data-on-scroll=\"{{onScroll}}\">\n        <div class=\"modal-dialog\" role=\"document\" mbr-class=\"{\n            'modal-sm': popupSize == 1,\n            '': popupSize == 2,\n            'modal-lg': popupSize == 3,\n            'modal-xl': popupSize == 4\n            }\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\" mbr-class=\"{'pb-0': showTitle && showText}\">\n                    <h5 class=\"modal-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".modal-title\" mbr-if=\"showTitle\">Add a Shipping Carrier</h5>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"currentColor\">\n                            <path d=\"M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z\"></path>\n                        </svg>\n                    </button>\n                </div>\n\n                <div class=\"modal-body\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\"></p>\n\n                    <div mbr-if=\"popupContentType !== 1\">\n                        <div class=\"card-img mbr-figure\" mbr-if=\"popupContentType == 2\">\n                            <img src=\"../_images/popup.jpg\" alt=\"Mobirise\">\n                        </div>\n                            <div mbr-video class=\"video-block mbr-figure\" mbr-if=\"popupContentType == 3\">\n                                <iframe src=\"https://youtu.be/JLNX5rkvGho?loop=0&autoplay=0\"></iframe>\n                            </div>\n\n                            <div mbr-form mbr-if=\"popupContentType == 4\" class=\"form-wrapper\">\n                                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                                    <div class=\"container\">\n                                        <div class=\"row\">\n                                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                                        </div>\n                                        <div class=\"row form-content\">\n                                            <div class=\"col-md-4 form-group\" data-for=\"name\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"col-md-4 form-group\" data-for=\"lastName\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" data-form-field=\"Last Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"form-group col\" data-for=\"email\">\n                                                <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                                            </div>\n                                            <div class=\"col-md-auto input-group-btn\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                                                <a type=\"submit\" class=\"btn btn-primary\">SUBSCRIBE</a>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"modal-footer\" mbr-class=\"{'pt-0': popupContentType == 1 || popupContentType == 4}\" mbr-if=\"showButtons\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://help.shipstation.ca/hc/en-ca/articles/360034349331-V3-Connect-a-Postage-Provider\" data-app-placeholder=\"Type Text\" target=\"_blank\">\n                                Learn More</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n</section>",
+          "_cid": "rPzd1t3CuD",
+          "_anchor": "mbr-popup-x",
+          "_popupId": "mbr-popup-x",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "popup-builder",
+          "_isSecondary": true,
+          "typeCompatible": "!isAMP",
+          "_styles": {
+            "&.popup-builder": {
+              "background-color": "#ffffff",
+              ".modal": {
+                "position": "relative",
+                "display": "block",
+                "z-index": "1"
+              },
+              ".modal-dialog": {
+                "margin-top": "60px",
+                "margin-bottom": "60px"
+              }
+            },
+            ".modal-content, .modal-dialog": {
+              "height": "auto"
+            },
+            ".form-wrapper": {
+              ".input-group-btn": {
+                "margin-right": "auto",
+                "margin-left": "auto",
+                ".btn": {
+                  "margin": "0 !important"
+                }
+              },
+              "@media (min-width: 769px)": {
+                ".mbr-form": {
+                  ".form-group, .input-group-btn": {
+                    "padding": "0 .5rem"
+                  }
+                }
+              }
+            },
+            ".card-img": {
+              "width": "100%",
+              "margin": "auto",
+              "border-radius": "0"
+            },
+            ".mbr-figure": {
+              "img": {
+                "display": "block",
+                "width": "100%",
+                "-ms-flex-item-align": "center",
+                "-ms-grid-row-align": "center",
+                "-webkit-align-self": "center",
+                "align-self": "center"
+              }
+            },
+            ".mbr-text": {
+              "text-align": "center"
+            },
+            ".pt-0": {
+              "padding-top": "0 !important"
+            },
+            ".pb-0": {
+              "padding-bottom": "0 !important"
+            },
+            ".form-content": {
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "text-align": "center"
+            },
+            ".mbr-overlay": {
+              "bottom": "0",
+              "left": "0",
+              "position": "absolute",
+              "right": "0",
+              "top": "0",
+              "z-index": "0",
+              "pointer-events": "none"
+            },
+            ".modal-open": {
+              "overflow": "hidden"
+            },
+            ".modal-open .modal": {
+              "overflow-x": "hidden",
+              "overflow-y": "auto"
+            },
+            ".modal": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1050",
+              "display": "none",
+              "width": "100%",
+              "height": "100%",
+              "overflow": "hidden",
+              "outline": "0"
+            },
+            ".modal-dialog": {
+              "position": "relative",
+              "width": "auto",
+              "margin": ".5rem",
+              "pointer-events": "none"
+            },
+            ".modal.fade .modal-dialog": {
+              "transition": "transform 0.3s ease-out, -webkit-transform 0.3s ease-out",
+              "-webkit-transform": "translate(0, -50px)",
+              "transform": "translate(0, -50px)"
+            },
+            ".modal.show .modal-dialog": {
+              "-webkit-transform": "none",
+              "transform": "none"
+            },
+            ".modal-dialog-centered": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "min-height": "~\"calc(100% - (.5rem * 2))\""
+            },
+            ".modal-dialog-centered::before": {
+              "display": "block",
+              "height": "~\"calc(100vh - (.5rem * 2))\"",
+              "content": "\"\""
+            },
+            ".modal-content": {
+              "background": "@cardBg",
+              "position": "relative",
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "width": "100%",
+              "pointer-events": "auto",
+              "background-clip": "padding-box",
+              "border": "none",
+              "outline": "0",
+              "-webkit-box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)",
+              "box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)"
+            },
+            ".modal-backdrop": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1040",
+              "width": "100vw",
+              "height": "100vh",
+              "background-color": "#000"
+            },
+            ".modal-backdrop.fade": {
+              "opacity": "0"
+            },
+            ".modal-backdrop.show": {
+              "opacity": ".5"
+            },
+            ".modal-header": {
+              "display": "flex",
+              "-ms-flex-align": "start",
+              "align-items": "flex-start",
+              "-ms-flex-pack": "justify",
+              "justify-content": "space-between",
+              "padding": "1rem",
+              "border-bottom": "none"
+            },
+            ".modal-header .close": {
+              "position": "absolute",
+              "top": "auto",
+              "right": "1rem",
+              "margin": "-1rem -1rem -1rem auto",
+              "padding": "1rem",
+              "opacity": ".75",
+              "&:hover": {
+                "opacity": "1"
+              },
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".modal-title": {
+              "line-height": "1.5",
+              "width": "100%",
+              "margin": "0",
+              "text-align": "center"
+            },
+            ".modal-body": {
+              "position": "relative",
+              "-ms-flex": "1 1 auto",
+              "flex": "1 1 auto",
+              "padding": "1rem",
+              "min-height": "100%"
+            },
+            ".modal-footer": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "padding": "1rem",
+              "border-top": "none",
+              "text-align": "center"
+            },
+            ".modal-scrollbar-measure": {
+              "position": "absolute",
+              "top": "-9999px",
+              "width": "50px",
+              "height": "50px",
+              "overflow": "scroll"
+            },
+            "@media (min-width: 576px)": {
+              ".modal-dialog": {
+                "max-width": "500px",
+                "margin": "1.75rem auto"
+              },
+              ".modal-dialog-centered": {
+                "min-height": "~\"calc(100% - (1.75rem * 2))\""
+              },
+              ".modal-dialog-centered::before": {
+                "height": "~\"calc(100vh - (1.75rem * 2))\""
+              },
+              ".modal-sm": {
+                "max-width": "300px"
+              },
+              ".container": {
+                "max-width": "540px"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".modal-lg, .modal-xl": {
+                "max-width": "800px"
+              },
+              ".container": {
+                "max-width": "960px"
+              }
+            },
+            "@media (min-width: 1200px)": {
+              ".modal-xl": {
+                "max-width": "1140px"
+              },
+              ".container": {
+                "max-width": "1140px"
+              }
+            },
+            ".container": {
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            "@media (min-width: 768px)": {
+              ".container": {
+                "max-width": "720px"
+              }
+            },
+            ".row": {
+              "display": "flex",
+              "-ms-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "margin-right": "-15px",
+              "margin-left": "-15px"
+            },
+            ".col-md-4": {
+              "position": "relative",
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 33.333333%",
+              "flex": "0 0 33.333333%",
+              "max-width": "33.333333%"
+            },
+            ".form-group": {
+              "margin-bottom": "1rem"
+            },
+            ".form-control": {
+              "display": "block",
+              "width": "100%",
+              "font-size": "1rem",
+              "font-weight": "400",
+              "line-height": "1.5"
+            },
+            ".col": {
+              "-ms-flex-preferred-size": "0",
+              "flex-basis": "0",
+              "-ms-flex-positive": "1",
+              "flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".col-md-auto": {
+              "position": "relative",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 auto",
+              "flex": "0 0 auto",
+              "width": "auto",
+              "max-width": "100%"
+            }
+          },
+          "_name": "mbr-popup",
+          "_customHTML": "<section class=\"popup-builder\" group=\"Popup\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Triggers / Show Popup</header>\n        <label>On Click</label>\n        <label>Use [popup-id] with any link or button (Link -&gt; Popup tab)</label>\n\n        <input type=\"checkbox\" title=\"On Timer\" name=\"onTimer\">\n        <input type=\"range\" title=\"Delay (s)\" name=\"onTimerDelay\" min=\"0\" max=\"30\" step=\"1\" value=\"5\" condition=\"onTimer == true\">\n\n        <input type=\"checkbox\" title=\"On Page Exit\" name=\"onPageExit\">\n\n        <input type=\"checkbox\" title=\"On Scroll to End\" name=\"onScroll\">\n\n        <select title=\"Add to Pages:\" name=\"popupOnPages\" multiple condition=\"onTimer == true || onPageExit == true || onScroll == true\"></select>\n\n        <header>Content</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <select title=\"Content Type\" name=\"popupContentType\">\n            <option value=\"1\">None</option>\n            <option value=\"2\">Image</option>\n            <option value=\"3\" selected>Video</option>\n            <option value=\"4\">Form</option>\n        </select>\n\n        <select title=\"Size\" name=\"popupSize\">\n            <option value=\"1\">Small</option>\n            <option value=\"2\">Default</option>\n            <option value=\"3\" selected>Large</option>\n            <option value=\"4\">Extra large</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <input type=\"color\" title=\"Background Color\" name=\"cardBg\" value=\"#ffffff\">\n\n        <header>Overlay</header>\n        <input type=\"color\" title=\"Color\" name=\"popupOverlayColor\" value=\"#000000\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': popupOverlayColor, 'top': 0, 'right': 0, 'bottom': 0, 'left': 0, 'position': absolute, 'z-index': 0, 'pointer-events': none}\">\n    </div>\n\n    <div class=\"modal mbr-popup\" tabindex=\"-1\" role=\"dialog\" data-overlay-color=\"{{popupOverlayColor}}\" data-overlay-opacity=\"{{overlayOpacity}}\" data-on-timer-delay=\"{{onTimer ? onTimerDelay : ''}}\" data-on-exit=\"{{onPageExit}}\" data-on-scroll=\"{{onScroll}}\">\n        <div class=\"modal-dialog\" role=\"document\" mbr-class=\"{\n            'modal-sm': popupSize == 1,\n            '': popupSize == 2,\n            'modal-lg': popupSize == 3,\n            'modal-xl': popupSize == 4\n            }\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\" mbr-class=\"{'pb-0': showTitle && showText}\">\n                    <h5 class=\"modal-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".modal-title\" mbr-if=\"showTitle\">Connect a Selling Channel</h5>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"currentColor\">\n                            <path d=\"M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z\"></path>\n                        </svg>\n                    </button>\n                </div>\n\n                <div class=\"modal-body\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\"></p>\n\n                    <div mbr-if=\"popupContentType !== 1\">\n                        <div class=\"card-img mbr-figure\" mbr-if=\"popupContentType == 2\">\n                            <img src=\"../_images/popup.jpg\" alt=\"Mobirise\">\n                        </div>\n                            <div mbr-video class=\"video-block mbr-figure\" mbr-if=\"popupContentType == 3\">\n                                <iframe src=\"https://youtu.be/Q9QKljcdiXc?loop=0&autoplay=0\"></iframe>\n                            </div>\n\n                            <div mbr-form mbr-if=\"popupContentType == 4\" class=\"form-wrapper\">\n                                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                                    <div class=\"container\">\n                                        <div class=\"row\">\n                                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                                        </div>\n                                        <div class=\"row form-content\">\n                                            <div class=\"col-md-4 form-group\" data-for=\"name\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"col-md-4 form-group\" data-for=\"lastName\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" data-form-field=\"Last Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"form-group col\" data-for=\"email\">\n                                                <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                                            </div>\n                                            <div class=\"col-md-auto input-group-btn\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                                                <a type=\"submit\" class=\"btn btn-primary\">SUBSCRIBE</a>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"modal-footer\" mbr-class=\"{'pt-0': popupContentType == 1 || popupContentType == 4}\" mbr-if=\"showButtons\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://help.shipstation.ca/hc/en-ca/articles/360033977172-V3-Connect-a-Store\" data-app-placeholder=\"Type Text\" target=\"_blank\">\n                                Learn More</a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n</section>",
+          "_cid": "rPzd2JOhKZ",
+          "_anchor": "mbr-popup-y",
+          "_popupId": "mbr-popup-y",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": "popup-builder",
+          "_isSecondary": true,
+          "typeCompatible": "!isAMP",
+          "_styles": {
+            "&.popup-builder": {
+              "background-color": "#ffffff",
+              ".modal": {
+                "position": "relative",
+                "display": "block",
+                "z-index": "1"
+              },
+              ".modal-dialog": {
+                "margin-top": "60px",
+                "margin-bottom": "60px"
+              }
+            },
+            ".modal-content, .modal-dialog": {
+              "height": "auto"
+            },
+            ".form-wrapper": {
+              ".input-group-btn": {
+                "margin-right": "auto",
+                "margin-left": "auto",
+                ".btn": {
+                  "margin": "0 !important"
+                }
+              },
+              "@media (min-width: 769px)": {
+                ".mbr-form": {
+                  ".form-group, .input-group-btn": {
+                    "padding": "0 .5rem"
+                  }
+                }
+              }
+            },
+            ".card-img": {
+              "width": "100%",
+              "margin": "auto",
+              "border-radius": "0"
+            },
+            ".mbr-figure": {
+              "img": {
+                "display": "block",
+                "width": "100%",
+                "-ms-flex-item-align": "center",
+                "-ms-grid-row-align": "center",
+                "-webkit-align-self": "center",
+                "align-self": "center"
+              }
+            },
+            ".mbr-text": {
+              "text-align": "center"
+            },
+            ".pt-0": {
+              "padding-top": "0 !important"
+            },
+            ".pb-0": {
+              "padding-bottom": "0 !important"
+            },
+            ".form-content": {
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "text-align": "center"
+            },
+            ".mbr-overlay": {
+              "bottom": "0",
+              "left": "0",
+              "position": "absolute",
+              "right": "0",
+              "top": "0",
+              "z-index": "0",
+              "pointer-events": "none"
+            },
+            ".modal-open": {
+              "overflow": "hidden"
+            },
+            ".modal-open .modal": {
+              "overflow-x": "hidden",
+              "overflow-y": "auto"
+            },
+            ".modal": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1050",
+              "display": "none",
+              "width": "100%",
+              "height": "100%",
+              "overflow": "hidden",
+              "outline": "0"
+            },
+            ".modal-dialog": {
+              "position": "relative",
+              "width": "auto",
+              "margin": ".5rem",
+              "pointer-events": "none"
+            },
+            ".modal.fade .modal-dialog": {
+              "transition": "transform 0.3s ease-out, -webkit-transform 0.3s ease-out",
+              "-webkit-transform": "translate(0, -50px)",
+              "transform": "translate(0, -50px)"
+            },
+            ".modal.show .modal-dialog": {
+              "-webkit-transform": "none",
+              "transform": "none"
+            },
+            ".modal-dialog-centered": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "min-height": "~\"calc(100% - (.5rem * 2))\""
+            },
+            ".modal-dialog-centered::before": {
+              "display": "block",
+              "height": "~\"calc(100vh - (.5rem * 2))\"",
+              "content": "\"\""
+            },
+            ".modal-content": {
+              "background": "@cardBg",
+              "position": "relative",
+              "display": "flex",
+              "-ms-flex-direction": "column",
+              "flex-direction": "column",
+              "width": "100%",
+              "pointer-events": "auto",
+              "background-clip": "padding-box",
+              "border": "none",
+              "outline": "0",
+              "-webkit-box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)",
+              "box-shadow": "0 10px 40px 0 rgba(0, 0, 0, 0.2)"
+            },
+            ".modal-backdrop": {
+              "position": "fixed",
+              "top": "0",
+              "left": "0",
+              "z-index": "1040",
+              "width": "100vw",
+              "height": "100vh",
+              "background-color": "#000"
+            },
+            ".modal-backdrop.fade": {
+              "opacity": "0"
+            },
+            ".modal-backdrop.show": {
+              "opacity": ".5"
+            },
+            ".modal-header": {
+              "display": "flex",
+              "-ms-flex-align": "start",
+              "align-items": "flex-start",
+              "-ms-flex-pack": "justify",
+              "justify-content": "space-between",
+              "padding": "1rem",
+              "border-bottom": "none"
+            },
+            ".modal-header .close": {
+              "position": "absolute",
+              "top": "auto",
+              "right": "1rem",
+              "margin": "-1rem -1rem -1rem auto",
+              "padding": "1rem",
+              "opacity": ".75",
+              "&:hover": {
+                "opacity": "1"
+              },
+              "&:focus": {
+                "outline": "none"
+              }
+            },
+            ".modal-title": {
+              "line-height": "1.5",
+              "width": "100%",
+              "margin": "0",
+              "text-align": "center"
+            },
+            ".modal-body": {
+              "position": "relative",
+              "-ms-flex": "1 1 auto",
+              "flex": "1 1 auto",
+              "padding": "1rem",
+              "min-height": "100%"
+            },
+            ".modal-footer": {
+              "display": "flex",
+              "-ms-flex-align": "center",
+              "align-items": "center",
+              "-ms-flex-pack": "center",
+              "justify-content": "center",
+              "padding": "1rem",
+              "border-top": "none",
+              "text-align": "center"
+            },
+            ".modal-scrollbar-measure": {
+              "position": "absolute",
+              "top": "-9999px",
+              "width": "50px",
+              "height": "50px",
+              "overflow": "scroll"
+            },
+            "@media (min-width: 576px)": {
+              ".modal-dialog": {
+                "max-width": "500px",
+                "margin": "1.75rem auto"
+              },
+              ".modal-dialog-centered": {
+                "min-height": "~\"calc(100% - (1.75rem * 2))\""
+              },
+              ".modal-dialog-centered::before": {
+                "height": "~\"calc(100vh - (1.75rem * 2))\""
+              },
+              ".modal-sm": {
+                "max-width": "300px"
+              },
+              ".container": {
+                "max-width": "540px"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".modal-lg, .modal-xl": {
+                "max-width": "800px"
+              },
+              ".container": {
+                "max-width": "960px"
+              }
+            },
+            "@media (min-width: 1200px)": {
+              ".modal-xl": {
+                "max-width": "1140px"
+              },
+              ".container": {
+                "max-width": "1140px"
+              }
+            },
+            ".container": {
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            "@media (min-width: 768px)": {
+              ".container": {
+                "max-width": "720px"
+              }
+            },
+            ".row": {
+              "display": "flex",
+              "-ms-flex-wrap": "wrap",
+              "flex-wrap": "wrap",
+              "margin-right": "-15px",
+              "margin-left": "-15px"
+            },
+            ".col-md-4": {
+              "position": "relative",
+              "width": "100%",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 33.333333%",
+              "flex": "0 0 33.333333%",
+              "max-width": "33.333333%"
+            },
+            ".form-group": {
+              "margin-bottom": "1rem"
+            },
+            ".form-control": {
+              "display": "block",
+              "width": "100%",
+              "font-size": "1rem",
+              "font-weight": "400",
+              "line-height": "1.5"
+            },
+            ".col": {
+              "-ms-flex-preferred-size": "0",
+              "flex-basis": "0",
+              "-ms-flex-positive": "1",
+              "flex-grow": "1",
+              "max-width": "100%"
+            },
+            ".col-md-auto": {
+              "position": "relative",
+              "padding-right": "15px",
+              "padding-left": "15px",
+              "-ms-flex": "0 0 auto",
+              "flex": "0 0 auto",
+              "width": "auto",
+              "max-width": "100%"
+            }
+          },
+          "_name": "mbr-popup",
+          "_customHTML": "<section class=\"popup-builder\" group=\"Popup\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Triggers / Show Popup</header>\n        <label>On Click</label>\n        <label>Use [popup-id] with any link or button (Link -&gt; Popup tab)</label>\n\n        <input type=\"checkbox\" title=\"On Timer\" name=\"onTimer\">\n        <input type=\"range\" title=\"Delay (s)\" name=\"onTimerDelay\" min=\"0\" max=\"30\" step=\"1\" value=\"5\" condition=\"onTimer == true\">\n\n        <input type=\"checkbox\" title=\"On Page Exit\" name=\"onPageExit\">\n\n        <input type=\"checkbox\" title=\"On Scroll to End\" name=\"onScroll\">\n\n        <select title=\"Add to Pages:\" name=\"popupOnPages\" multiple condition=\"onTimer == true || onPageExit == true || onScroll == true\"></select>\n\n        <header>Content</header>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n\n        <select title=\"Content Type\" name=\"popupContentType\">\n            <option value=\"1\">None</option>\n            <option value=\"2\">Image</option>\n            <option value=\"3\" selected>Video</option>\n            <option value=\"4\">Form</option>\n        </select>\n\n        <select title=\"Size\" name=\"popupSize\">\n            <option value=\"1\">Small</option>\n            <option value=\"2\">Default</option>\n            <option value=\"3\" selected>Large</option>\n            <option value=\"4\">Extra large</option>\n        </select>\n\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <input type=\"color\" title=\"Background Color\" name=\"cardBg\" value=\"#ffffff\">\n\n        <header>Overlay</header>\n        <input type=\"color\" title=\"Color\" name=\"popupOverlayColor\" value=\"#000000\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': popupOverlayColor, 'top': 0, 'right': 0, 'bottom': 0, 'left': 0, 'position': absolute, 'z-index': 0, 'pointer-events': none}\">\n    </div>\n\n    <div class=\"modal mbr-popup\" tabindex=\"-1\" role=\"dialog\" data-overlay-color=\"{{popupOverlayColor}}\" data-overlay-opacity=\"{{overlayOpacity}}\" data-on-timer-delay=\"{{onTimer ? onTimerDelay : ''}}\" data-on-exit=\"{{onPageExit}}\" data-on-scroll=\"{{onScroll}}\">\n        <div class=\"modal-dialog\" role=\"document\" mbr-class=\"{\n            'modal-sm': popupSize == 1,\n            '': popupSize == 2,\n            'modal-lg': popupSize == 3,\n            'modal-xl': popupSize == 4\n            }\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\" mbr-class=\"{'pb-0': showTitle && showText}\">\n                    <h5 class=\"modal-title mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".modal-title\" mbr-if=\"showTitle\">Select Your Label Layout</h5>\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                        <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 32 32\" fill=\"currentColor\">\n                            <path d=\"M31.797 0.191c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.598 0.581 0.342 1.543 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM14.472 17.515c-0.264-0.256-0.686-0.25-0.942 0.015l-13.328 13.326c-0.613 0.595 0.34 1.562 0.942 0.942l13.328-13.326c0.27-0.262 0.27-0.695 0-0.957zM1.144 0.205c-0.584-0.587-1.544 0.336-0.942 0.942l30.654 30.651c0.613 0.625 1.563-0.325 0.942-0.942z\"></path>\n                        </svg>\n                    </button>\n                </div>\n\n                <div class=\"modal-body\">\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" mbr-if=\"showText\"></p>\n\n                    <div mbr-if=\"popupContentType !== 1\">\n                        <div class=\"card-img mbr-figure\" mbr-if=\"popupContentType == 2\">\n                            <img src=\"../_images/popup.jpg\" alt=\"Mobirise\">\n                        </div>\n                            <div mbr-video class=\"video-block mbr-figure\" mbr-if=\"popupContentType == 3\">\n                                <iframe src=\"https://youtu.be/5mZ8LbXiamY?loop=0&autoplay=0\"></iframe>\n                            </div>\n\n                            <div mbr-form mbr-if=\"popupContentType == 4\" class=\"form-wrapper\">\n                                <form action name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n                                    <div class=\"container\">\n                                        <div class=\"row\">\n                                            <div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n                                            <div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"></div>\n                                        </div>\n                                        <div class=\"row form-content\">\n                                            <div class=\"col-md-4 form-group\" data-for=\"name\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"name\" placeholder=\"Name\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"col-md-4 form-group\" data-for=\"lastName\" hidden=\"hidden\">\n                                                <input type=\"text\" name=\"lastName\" placeholder=\"Last Name\" data-form-field=\"Last Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\" hidden=\"hidden\">\n                                            </div>\n                                            <div class=\"form-group col\" data-for=\"email\">\n                                                <input type=\"email\" name=\"email\" placeholder=\"Email\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control\">\n                                            </div>\n                                            <div class=\"col-md-auto input-group-btn\" mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrBtnLink,-mbrBtnAdd\">\n                                                <a type=\"submit\" class=\"btn btn-primary\">SUBSCRIBE</a>\n                                            </div>\n                                        </div>\n                                    </div>\n                                </form>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"modal-footer\" mbr-class=\"{'pt-0': popupContentType == 1 || popupContentType == 4}\" mbr-if=\"showButtons\">\n                        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://help.shipstation.ca/hc/en-ca/articles/360034349611-V3-ShipStation-Label-Document-Settings\" data-app-placeholder=\"Type Text\" target=\"_blank\">\n                                LEARN MORE\n                            </a></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n</section>",
+          "_cid": "rPzd3sbZf6",
+          "_anchor": "mbr-popup-z",
+          "_popupId": "mbr-popup-z",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
